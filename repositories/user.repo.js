@@ -13,11 +13,13 @@ const UserRepo = {
         return result;
     },
 
-    getUserByEmail: async (email, transaction) => {
-        return await User.findOne({
-            where: { email },
-            ...(transaction ? { transaction } : {}),
+    getUserByEmail: async (email) => {
+        const result = await User.findOne({
+            where: {
+                email: email,
+            },
         });
+        return result;
     },
 
     getAllUser: async () => {
@@ -102,19 +104,6 @@ const UserRepo = {
             {
                 where: {
                     id: user_id,
-                },
-            }
-        );
-        return result;
-    },
-    verifyUserById: async (id, status) => {
-        const result = await User.update(
-            {
-                verify_Status: status,
-            },
-            {
-                where: {
-                    id: id,
                 },
             }
         );

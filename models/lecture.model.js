@@ -28,7 +28,7 @@ export const Lecture = sequelize.define(
             allowNull: true
         },
         mode: {
-            type: DataTypes.ENUM("online", "physical", "both"),
+            type: DataTypes.ENUM("online", "physical"),
             allowNull: true
         },
         dob: {
