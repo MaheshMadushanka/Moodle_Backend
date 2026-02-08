@@ -26,10 +26,6 @@ export const User = sequelize.define(
             type: DataTypes.DATE,
             allowNull: true
         },
-        verify_Status: {
-            type: DataTypes.BOOLEAN,
-            defaultValue: false
-        }
     },
     {
         tableName: "user",
