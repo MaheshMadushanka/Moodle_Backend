@@ -3,6 +3,7 @@ import express from "express";
 import cors from "cors";
 import sequelize from "./config/db.config.js";
 import RoleRoutes from "./routes/role.route.js";
+import AdminRoutes from "./routes/admin.route.js";
 
 dotenv.config();
 const app = express();
@@ -35,6 +36,7 @@ sequelize
 // Main Routes
 
 app.use('/api/role', RoleRoutes);
+app.use('/api/admin', AdminRoutes);
 
 // Run server
 app.listen(PORT, () => {

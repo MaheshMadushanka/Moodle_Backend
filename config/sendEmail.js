@@ -26,7 +26,7 @@ const sendEmail = async (email, message, subject) => {
   try {
     const transporter = getTransporter();
     const mailOptions = {
-      from: `"Dysonitworks" <${process.env.USER_EMAIL}>`,
+      from: `"VTC" <${process.env.USER_EMAIL}>`,
       to: email,
       subject: subject,
       html: message,
