@@ -66,8 +66,6 @@ web_modules/
 .yarn-integrity
 
 # dotenv environment variable files
-.env
-.env.*
 !.env.example
 
 # parcel-bundler cache (https://parceljs.org/)
@@ -94,7 +92,6 @@ dist
 # vuepress v2.x temp and cache directory
 .temp
 .cache
-.vscode
 # Sveltekit cache directory
 .svelte-kit/
 
@@ -138,3 +135,5 @@ dist
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 config.bat
+temp_auto_push.bat
+temp_interactive_push.bat

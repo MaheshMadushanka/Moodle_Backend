@@ -99,7 +99,7 @@ Dear ${full_name},<br><br>
 
 Your employee account has been successfully created. Below are your login credentials:<br><br>
 
-<b>Username:</b> ${email}<br>
+<b>Email:</b> ${email}<br>
 <b>Password:</b> ${password}<br><br>
 
 For security reasons, please log in and change your password immediately after your first login.<br><br>
