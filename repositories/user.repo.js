@@ -1,3 +1,7 @@
+import Admin from "../models/admin.model.js";
+import Lecture from "../models/lecture.model.js";
+import Role from "../models/role.model.js";
+import Student from "../models/student.model.js";
 import User from "../models/user.model.js";
 
 const UserRepo = {
@@ -32,6 +36,11 @@ const UserRepo = {
             where: {
                 id: id,
             },
+             include: [
+                    { model: Admin, required: false, include: [{ model: Role, required: false }] },
+                    { model: Lecture, required: false, include: [{ model: Role, required: false }] },
+                    { model: Student, required: false, include: [{ model: Role, required: false }] },
+                ],
         });
         return result;
     },

@@ -37,6 +37,7 @@ const UserService = {
             const user = await userRepo.getUserByEmail(email);
 
             if (user) {
+                 const useDetails = await userRepo.getUserById(user.id);
                 const match = await bcrypt.compare(password, user.password);
                 if (match) {
                     // Generate JWT token
@@ -52,8 +53,7 @@ const UserService = {
                         status: true,
                         message: "Logged In Successfully!",
                         user: {
-                            id: user.id,
-                            email: user.email,
+                            userDetails: useDetails?.[0] || null,
                         },
                         token: token,
                     };
